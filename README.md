@@ -1,7 +1,7 @@
 SUMMARY
 -------
 
-**Scrum2B** is a plugin for Redmine (www.redmine.org) that offers pre-project Scrum Boards and other features aimed at teams wanting to use Scrum for agile project development.
+**Scrum2B** is a plugin of Redmine (www.redmine.org), support Scrum Board and other features allow teams could use Scrum to develop Agile project.
 Scrum2B is developed by Scrum2B Team.
 
 ***Contacts:***
@@ -10,12 +10,12 @@ Scrum2B is developed by Scrum2B Team.
 - Facebook: *www.facebook.com/ScrumToBe*
 
 
-**The first version (1.0) is quite simple and includes 3 main features:**
+**The first version (1.0) is quite simple, includes 3 main features:**
 
-1. The ScrumBoard: derived from on another Redmine plugin, ours includes expanded functionality and allows teams to use it like a REAL BOARD.
-An awesome new feature is drag and drop sorting for task organization within a Sprint.
-2. The ListBoard: lists all issues based on the sort within a project ScrumBoard. The ListBoard streamlines issue tracking in Redmine projects.
-3. Interface is based on Twitter Bootstrap, offering a better look and feeling.
+1. The ScrumBoard: based on another Redmine plugin with a board, but we completed more features, allow teams could treat like a REAL BOARD.
+Users could drad and drop a task to sort/organizate the Sprint.
+2. The ListBoard: list all issues based on the sort from ScrumBoard and make it more simple than Issue Tracking in Redmine.
+3. The interface of screens based on Twitter Bootstrap, with better look and feeling.
 (You should get the theme: https://github.com/scrum2b/redmine-scrum2b-theme to install in Redmine)
 
 **You could see the demo version at:**
@@ -24,8 +24,8 @@ An awesome new feature is drag and drop sorting for task organization within a S
 
 (Please login with username/password: **demo/demo123** to get more detail how Scrum2B works)
 
-*We are focused on making it easier to integrate Scrum in project management. 
-If you have ideas on improving the tools we've developed, please do not hesitage to email me at scrum2b@ithanoi.com, 
+*We are focus to make easier and more simple to practice Scrum in Project management. 
+So if you find any new ideas to improve the tools, please do not hesitage to send message to me at scrum2b@ithanoi.com, 
 Or create a Pull request (https://github.com/scrum2b/scrum2b/pulls) to us.*
 
 
@@ -38,7 +38,7 @@ Scrum2B is open source and released under the terms of the GNU General Public Li
 INSTALLATION
 ------------
 
-This plugin is compatible with Redmine 2.3.x, 2.2.x, 2.1.x, 2.0.x.
+The tool could run based on Redmine 2.3.x, 2.2.x, 2.1.x, 2.0.x.
 
 Go to the Redmine plugin folder. Clone the plugin from GitHub:
     
@@ -53,7 +53,8 @@ Go back to the Redmine folder, update your bundle and migrate the database:
 
 Restart Redmine
 
-Go to the plugin configuration page and map the each issue status to applicable Scrum New/In progress/Complete/Closed:
+Before make the plugin be available in projects, please login to Admin account.
+Go to the Configuration page of the plugin to map the Status of issues to New/In progress/Complete/Closed:
 
     http://localhost:3000/settings/plugin/scrum2b 
 
@@ -74,7 +75,7 @@ Commit codes
     $ git push -u origin develop
 
 
-FOR FUTURE RELEASES
+FOR FURTURE FEATURES
 --------------------
 
 We want to implement new features in short term:
