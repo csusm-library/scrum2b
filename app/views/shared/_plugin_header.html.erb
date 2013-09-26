@@ -1,27 +1,30 @@
 <% html_title "#{is_board ? "Scrum Board" : "Sprint Backlogs"} - #{@project.name}" %>
 <% content_for :header_tags do %>
   <%= stylesheet_link_tag 'bootstrap', :plugin => 'scrum2b' %>
-  <%= stylesheet_link_tag 'jquery-ui-slider', :plugin => 'scrum2b' %>
   <%= stylesheet_link_tag 'version', :plugin => 'scrum2b' %>
+<<<<<<< HEAD
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
   <script src="//code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+=======
+  <%= stylesheet_link_tag 'application', :plugin => 'scrum2b' %>
+  <%= javascript_include_tag "application", :plugin => 'scrum2b' %>
+>>>>>>> 39fa851f23611e57ee4c351e1fa75cbd423447de
 <% end %>
-
 <div class="container-fluid">
   <p class="issues">
     <%= is_board ? l(:label_scrum2b_board) : l(:label_scrum2b_list) %>
   </p>
   <% if is_board %>
-    <%= button_to l(:label_scrum2b_list), {:action => "index", :project_id =>  params[:project_id], :switch_screens => 1},
-                    :class => "btn btn-small btn_submit_board btn-primary"%>
+    <%= button_to l(:label_scrum2b_list), {:controller => "s2b_lists", :action => "index", :project_id =>  params[:project_id], :switch_screens => 1},
+                    :class => "btn btn_submit_board btn-primary"%>
   <% else %> 
-    <%= button_to l(:label_scrum2b_board), {:action => "board", :project_id =>  params[:project_id], :switch_screens => 1},
-                    :class => "btn btn-small btn_submit_board btn-primary" %>
+    <%= button_to l(:label_scrum2b_board), {:controller => "s2b_boards", :action => "index", :project_id =>  params[:project_id], :switch_screens => 1},
+                    :class => "btn btn_submit_board btn-primary" %>
   <% end %>
 </div>
 
 <% if is_board %>
-  <%= render :partial => "/shared/filter_board", :locals => {:is_board => is_board } %>
+  <%= render :partial => "/shared/filter_board", :locals => {:is_board => is_board} %>
 <% else %>
   <%= render :partial => "/shared/filter_list", :locals => { :list_version => @list_versions} %>
 <% end %>
